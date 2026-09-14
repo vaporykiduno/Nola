@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt | Nola®</title>
+</head>
+<body>
+  <!--
+    NOTE (from the Figma design system's Notes & Assumptions page):
+    the real /kontakt/ page has no multi-field contact form — only
+    mailto/tel links. This page intentionally mirrors that, rather than
+    inventing a form that doesn't exist on the live site.
+  -->
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+  <div data-include="/src/partials/header.html"></div>
+
+  <main id="main">
+    <section class="section--tight">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Brödsmulor" style="margin-bottom: 24px;">
+          <a href="/">Hem</a><span class="breadcrumbs__sep">/</span><span>Kontakt</span>
+        </nav>
+        <h1 class="h1" style="margin-bottom: 40px;">Kontakt</h1>
+
+        <div style="display:flex; gap: 60px; flex-wrap: wrap;">
+          <div class="site-footer__office">
+            <h2 class="h3" style="margin-bottom: 8px;">Huvudkontor Stockholm</h2>
+            <p class="body-text">Nola Industrier AB</p>
+            <p class="body-text">Blekingegatan 26</p>
+            <p class="body-text">118 56 Stockholm</p>
+            <p class="body-text">Tel: <a href="tel:+4687021960">08-702 1960</a></p>
+            <p class="body-text">Fax: 08-702 1962</p>
+            <p class="body-text"><a href="mailto:headoffice@nola.se">headoffice@nola.se</a></p>
+          </div>
+          <div class="site-footer__office">
+            <h2 class="h3" style="margin-bottom: 8px;">Säljkontor/Showroom Malmö</h2>
+            <p class="body-text">Nola Industrier AB</p>
+            <p class="body-text">Neptunigatan 74</p>
+            <p class="body-text">211 18 Malmö</p>
+            <p class="body-text">Tel: <a href="tel:+46401711 90">040-171 190</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="/src/partials/footer.html"></div>
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "nola-local",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Local Vite replica of nola.se for testing changes, built from the NUI 1.0 Figma design system.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  },
+  "allowScripts": {
+    "esbuild@0.21.5": true,
+    "fsevents@2.3.3": true
+  }
+}

@@ -1,0 +1,161 @@
+@import "./tokens.css";
+@import "./fonts.css";
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd { margin: 0; }
+ul[class], ol[class] { list-style: none; margin: 0; padding: 0; }
+img, picture { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+input, textarea, select { font: inherit; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--typography-size-body);
+  line-height: 1.5;
+  letter-spacing: var(--typography-tracking-default);
+  color: var(--color-text-primary);
+  background: var(--color-bg-page);
+}
+
+/* ---------- Layout helpers ---------- */
+.container {
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+  padding-inline: 30px;
+}
+
+@media (max-width: 700px) {
+  .container { padding-inline: 20px; }
+}
+
+/* ---------- Typography (Nola/H1 … Nola/Accent Caption) ---------- */
+.h1-xl {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--typography-size-h1-xl);
+  line-height: 1;
+  letter-spacing: var(--typography-tracking-default);
+}
+.h1 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--typography-size-h1);
+  line-height: 1.15;
+  letter-spacing: var(--typography-tracking-default);
+}
+.h2 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--typography-size-h2);
+  line-height: 1.15;
+  letter-spacing: var(--typography-tracking-default);
+}
+.h3 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--typography-size-h3);
+  line-height: 1.15;
+  letter-spacing: var(--typography-tracking-default);
+}
+.h4 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--typography-size-h4);
+  line-height: 1.15;
+  letter-spacing: var(--typography-tracking-default);
+}
+.h5 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--typography-size-h5);
+  line-height: 1.15;
+  letter-spacing: var(--typography-tracking-default);
+}
+.h6-eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--typography-size-h6);
+  line-height: 1.15;
+  letter-spacing: var(--typography-tracking-eyebrow);
+  text-transform: uppercase;
+}
+.body-text {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--typography-size-body);
+  line-height: 1.5;
+  letter-spacing: var(--typography-tracking-default);
+}
+.button-label {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--typography-size-button);
+  line-height: 1.5;
+  letter-spacing: var(--typography-tracking-default);
+}
+.accent-italic {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 300;
+  font-size: var(--typography-size-body);
+  line-height: 1.5;
+  letter-spacing: var(--typography-tracking-default);
+}
+.accent-blockquote {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 300;
+  font-size: var(--typography-size-accent-blockquote);
+  line-height: 1.1;
+  letter-spacing: var(--typography-tracking-default);
+}
+.accent-caption {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 300;
+  font-size: var(--typography-size-accent-caption);
+  line-height: 1.3;
+  letter-spacing: var(--typography-tracking-default);
+}
+
+/* ---------- Buttons (Nola/Button component) ----------
+   Global reset: no border, 0px radius default, no hover color change
+   (feedback is opacity/fill-based only, per design system). */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px var(--spacing-lg);
+  background: var(--color-brand-primary);
+  color: var(--color-text-inverse);
+  font-family: var(--font-sans);
+  font-size: var(--typography-size-button);
+  line-height: 1.5;
+  letter-spacing: var(--typography-tracking-default);
+  border-radius: var(--radius-none);
+  border: none;
+}
+.btn:active { opacity: 0.85; }
+.btn--pill { border-radius: var(--radius-pill); }
+.btn--not-selected { background: var(--color-state-inactive); }
+.btn:disabled,
+.btn--disabled { opacity: 0.4; pointer-events: none; }
+
+/* ---------- Skip link (accessibility, not in Figma but good practice) ---------- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--color-brand-primary);
+  color: #fff;
+  padding: 10px 16px;
+  z-index: 1000;
+}
+.skip-link:focus { left: 10px; top: 10px; }

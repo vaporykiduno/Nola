@@ -1,0 +1,94 @@
+/*
+  Design tokens extracted from the NUI 1.0 Figma design system
+  (file H0t4kADOyBlXxerTWNcDq1). Source of truth: Figma "Foundations"
+  pages (Colors, Typography, Spacing/Radius/Elevation).
+*/
+
+:root {
+  /* ---- Color / Background ---- */
+  --color-bg-page: #fafafa;
+  --color-bg-surface-white: #ffffff;
+  --color-bg-surface-beige: #f5f1ec;
+  --color-bg-surface-grey: #f4f4f4;
+  --color-bg-surface-grey-light: #fafafa;
+  --color-bg-surface-pink: #fadfdf;
+
+  /* ---- Color / Text & Icon ---- */
+  --color-text-primary: #000000;
+  --color-text-inverse: #ffffff;
+  --color-text-secondary: #666666;
+  --color-icon-primary: #000000;
+  --color-icon-inverse: #ffffff;
+
+  /* ---- Color / Border ---- */
+  --color-border-default: #404040;
+  --color-border-subtle: rgba(60, 60, 60, 0.26);
+  --color-border-subtle-strong: rgba(60, 60, 60, 0.5);
+  --color-border-input: #000000;
+
+  /* ---- Color / Brand & State ---- */
+  --color-brand-primary: #1d8338;
+  --color-brand-selected: #186e2f;
+  --color-brand-highlight: #2c4228;
+  --color-state-error: #fb5858;
+  --color-state-inactive: #404040;
+  --color-interactive-focus: #5897fb;
+  --color-accent-tan: #bdaf9a;
+
+  /* ---- Color / Overlay & Scrim ---- */
+  --color-overlay-scrim-10: rgba(0, 0, 0, 0.1);
+  --color-overlay-scrim-20: rgba(0, 0, 0, 0.2);
+  --color-overlay-scrim-25: rgba(0, 0, 0, 0.25);
+  --color-overlay-scrim-50: rgba(0, 0, 0, 0.5);
+  --color-overlay-scrim-75: rgba(0, 0, 0, 0.75);
+  --color-overlay-scrim-90: rgba(0, 0, 0, 0.9);
+
+  /* ---- Typography ----
+     Typefaces: GT Walsheim (Regular/Medium) for sans; "Self Modern" italic
+     serif for accent/quote copy. Real licensed font files aren't part of
+     this repo — see src/styles/fonts.css for the fallback stack + swap note. */
+  --font-sans: "GT Walsheim", "Jost", "Helvetica Neue", Arial, sans-serif;
+  --font-accent: "Self Modern", Georgia, "Times New Roman", serif;
+
+  --typography-size-h1-xl: 60px;
+  --typography-size-h1: 32px;
+  --typography-size-h2: 23px;
+  --typography-size-h3: 20px;
+  --typography-size-h4: 16px;
+  --typography-size-h5: 15px;
+  --typography-size-h6: 14px;
+  --typography-size-body: 16px;
+  --typography-size-button: 18px;
+  --typography-size-accent-blockquote: 30px;
+  --typography-size-accent-caption: 17px;
+
+  --typography-tracking-default: 0.56px;
+  --typography-tracking-eyebrow: 0.08em; /* 8% of own size */
+
+  /* ---- Spacing (bespoke scale, clusters around multiples of 5) ---- */
+  --spacing-2xs: 5px;
+  --spacing-xs: 10px;
+  --spacing-sm: 15px;
+  --spacing-md: 20px;
+  --spacing-lg: 25px;
+  --spacing-xl: 30px;
+  --spacing-2xl: 60px;
+  --spacing-3xl: 120px;
+
+  /* ---- Radius (hard-edged system by default) ---- */
+  --radius-none: 0px;
+  --radius-sm: 4px;
+  --radius-md: 16px;
+  --radius-pill: 25px;
+
+  /* ---- Elevation (reserved for dropdown/overlay UI; rest of site is flat) ---- */
+  --shadow-dropdown: 0px 3px 6px 0px rgba(0, 0, 0, 0.15);
+  --shadow-modal: 0px 2px 8px 0px rgba(0, 0, 0, 0.4);
+  --shadow-panel-lg: 0px 4px 24px 0px rgba(0, 0, 0, 0.18);
+  --shadow-panel-secondary: 0px 2px 8px 0px rgba(0, 0, 0, 0.25);
+  --shadow-panel-alt: 0px 4px 20px 0px rgba(0, 0, 0, 0.2);
+
+  /* ---- Layout ---- */
+  --content-max-width: 1440px;
+  --header-height: 126px;
+}

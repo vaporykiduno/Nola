@@ -1,0 +1,42 @@
+/*
+  Font stack for the Nola design system.
+
+  NOTE (from the Figma design system's own annotations): the real site uses
+  licensed fonts — "GT Walsheim" (Regular/Medium) for UI/body text and
+  "bretagne-self-modern" ("Self Modern") as an italic serif accent typeface
+  for quotes/captions. Neither is freely redistributable, so this repo does
+  NOT bundle font files. Until you drop licensed font files into
+  src/assets/fonts/ and uncomment the @font-face blocks below, the site
+  falls back to close system/Google-Fonts-free substitutes so proportions
+  and line-length stay close to the real thing.
+
+  To use the real fonts locally:
+    1. Place licensed .woff2 files in src/assets/fonts/
+       (e.g. GTWalsheim-Regular.woff2, GTWalsheim-Medium.woff2,
+       SelfModern-Italic.woff2)
+    2. Uncomment the @font-face rules below and adjust filenames.
+*/
+
+/*
+@font-face {
+  font-family: "GT Walsheim";
+  src: url("/src/assets/fonts/GTWalsheim-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT Walsheim";
+  src: url("/src/assets/fonts/GTWalsheim-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Self Modern";
+  src: url("/src/assets/fonts/SelfModern-Italic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+*/
