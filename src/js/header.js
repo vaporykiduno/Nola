@@ -1,8 +1,9 @@
 // Header interactivity: mobile drawer toggle, "Om Nola" submenu, and
-// marking the current nav link active. Matches the behavior documented
-// on the Header & Navigation frame in the NUI 1.0 Figma file:
-// hamburger swaps to "×"; submenu opens beneath the nav on hover/click;
-// no hover color change on links (opacity/underline feedback only).
+// marking the current nav link active.
+//
+// The submenu opens only on click of its trigger link (not on hover of
+// the header/nav) — hover-open felt like an intrusive backdrop popping
+// open whenever the cursor passed near the header, so it was removed.
 export function initHeader() {
   const header = document.querySelector("[data-header]");
   if (!header) return;
@@ -30,7 +31,7 @@ export function initHeader() {
     });
   }
 
-  // "Om Nola" submenu (desktop hover + click for touch/keyboard)
+  // "Om Nola" submenu — click-to-toggle only, no hover trigger.
   const trigger = header.querySelector("[data-submenu-trigger]");
   const submenu = header.querySelector("[data-submenu]");
   if (trigger && submenu) {
@@ -42,15 +43,19 @@ export function initHeader() {
       submenu.classList.remove("is-open");
       trigger.setAttribute("aria-expanded", "false");
     };
-    const navBox = header.querySelector(".site-header__nav-box");
-    navBox.addEventListener("mouseenter", (e) => {
-      if (navBox.contains(trigger)) open();
-    });
-    trigger.addEventListener("mouseenter", open);
-    navBox.addEventListener("mouseleave", close);
     trigger.addEventListener("click", (e) => {
       e.preventDefault();
       submenu.classList.contains("is-open") ? close() : open();
+    });
+    // Click outside the nav box closes it.
+    document.addEventListener("click", (e) => {
+      if (!submenu.classList.contains("is-open")) return;
+      const navBox = header.querySelector(".site-header__nav-box");
+      if (!navBox.contains(e.target)) close();
+    });
+    // Escape closes it.
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && submenu.classList.contains("is-open")) close();
     });
   }
 }
